@@ -1,12 +1,16 @@
-## Slide 1: Introduction
-Explanation of a responsive website and its importance in modern web design.
-Brief overview of the role CSS plays in building responsive websites.
+## Introduction
+Responsive web design is a vital approach in modern web development that ensures a website looks and functions well on a variety of devices, particularly mobile devices. With an increasing number of users accessing the internet through smartphones and tablets, having a responsive design has become a necessity.
+
+CSS plays an integral role in this process. It allows developers to control layout, sizing, colors, and animations across different screen sizes using techniques such as media queries, flexible grid-based layouts, and flexible images and media. By adjusting styles based on the user's device, CSS facilitates the creation of a seamless user experience across devices, making websites truly responsive.
+
 
 ---
 
-## Slide 2: Principle #1: Fluid Grid Layouts
-Description: Fluid Grid Layouts help to design the structure of the page in relative units like percentages, instead of absolute units like pixels. This ensures that the elements adjust according to the screen size.
+## Principle #1: Fluid Grid Layouts
+Fluid Grid Layouts help to design the structure of the page in relative units like percentages, instead of absolute units like pixels. This ensures that the elements adjust according to the screen size.
 Example: Creating a simple layout with HTML and CSS, with percentages instead of fixed widths.
+
+
 ```
 <!DOCTYPE html>
 <html>
@@ -30,8 +34,8 @@ Example: Creating a simple layout with HTML and CSS, with percentages instead of
 </html>
 ```
 ---
-## Slide 3: Principle #2: Flexible Images
-Description: Images should also be flexible to avoid them getting larger than their containing elements. This prevents breaking layouts on smaller screens and ensures images look good on all devices.
+## Principle #2: Flexible Images
+Images should also be flexible to avoid them getting larger than their containing elements. This prevents breaking layouts on smaller screens and ensures images look good on all devices.
 
 Example: Making an image flexible using HTML and CSS.
 ```
@@ -54,7 +58,7 @@ Example: Making an image flexible using HTML and CSS.
 
 ---
 
-# Slide 4: Principle #3: Media Queries
+## Principle #3: Media Queries
 Description: Media Queries allow applying different styles for different devices. They can check many things, such as width and height of the viewport, width and height of the device, orientation (is the tablet/phone in landscape or portrait mode?), and resolution.
 
 Example: Creating a simple media query in CSS.
@@ -77,8 +81,8 @@ Example: Creating a simple media query in CSS.
 ```
 ---
 
-# Slide 5: Principle #4: Mobile First Approach
-Description: In the Mobile First Approach, we start by designing for the smallest screen sizes and gradually enhance the design for larger screens. This is an effective strategy to ensure your design looks good on a wide range of devices.
+## Principle #4: Mobile First Approach
+In the Mobile First Approach, we start by designing for the smallest screen sizes and gradually enhance the design for larger screens. This is an effective strategy to ensure your design looks good on a wide range of devices.
 
 Example: Demonstrating how to design for mobile first using media queries.
 
@@ -104,8 +108,8 @@ body {
 
 ```
 
-# Slide 6: Principle #5: CSS Flexbox
-Description: Flexbox is a layout module in CSS that allows easy alignment of elements on the main axis or the cross axis of the current line of the flex container. This makes it a powerful tool for creating responsive designs.
+## Principle #5:  CSS Flexbox
+Flexbox is a layout module in CSS that allows easy alignment of elements on the main axis or the cross axis of the current line of the flex container. This makes it a powerful tool for creating responsive designs.
 
 Example: Creating a simple Flexbox layout with CSS and HTML.
 
@@ -132,8 +136,8 @@ Example: Creating a simple Flexbox layout with CSS and HTML.
 </html>
 
 ```
-# Slide 7: Principle #6: CSS Grid
-Description: CSS Grid is a two-dimensional layout system for the web. It lets you layout content within rows and columns, and has features that make building complex responsive designs easier.
+## Principle #6: CSS Grid
+CSS Grid is a two-dimensional layout system for the web. It lets you layout content within rows and columns, and has features that make building complex responsive designs easier.
 
 Example: Demonstrating a simple grid layout with CSS and HTML.
 
@@ -166,8 +170,8 @@ Example: Demonstrating a simple grid layout with CSS and HTML.
 </html>
 
 ```
-# Slide 8: Principle #7: Using REM and EM Units
-Description: REM and EM are scalable units in CSS. EM is relative to the parent font-size, and REM is relative to the root (or html) font-size. These units allow for flexible and scalable designs.
+## Principle #7: Using REM and EM Units
+REM and EM are scalable units in CSS. EM is relative to the parent font-size, and REM is relative to the root (or html) font-size. These units allow for flexible and scalable designs.
 
 Example: Using REM and EM units in CSS.
 
@@ -196,8 +200,8 @@ body {
 
 ```
 
-# Slide 9: Principle #8: Utilizing Viewport Units
-Description: Viewport units in CSS are length units representing a percentage of the current viewport dimensions: the vw unit represents a percentage of the viewport width, and vh is a percentage of the viewport height.
+## Principle #8: Utilizing Viewport Units
+Viewport units in CSS are length units representing a percentage of the current viewport dimensions: the vw unit represents a percentage of the viewport width, and vh is a percentage of the viewport height.
 
 Example: Showing how to use viewport units in CSS.
 
@@ -223,8 +227,8 @@ Example: Showing how to use viewport units in CSS.
 
 ```
 
-# Slide 10: Principle #9: Responsive Typography
-Description: Responsive Typography involves using flexible units so the text can adjust its size based on the screen size. This ensures that the text remains readable across different devices.
+## Principle #9: Responsive Typography
+Responsive Typography involves using flexible units so the text can adjust its size based on the screen size. This ensures that the text remains readable across different devices.
 
 Example: Creating responsive typography using CSS.
 ```
@@ -249,6 +253,86 @@ body {
 </head>
 <body>
 <p>This is an example of responsive typography.</p>
+</body>
+</html>
+
+```
+
+## Principle #10: Responsive Navigation
+Responsive navigation is a critical part of any responsive website design. As screens get smaller, a common pattern is to collapse the navigation into a 'hamburger' menu, an icon with three horizontal lines. When clicked, it expands to show the full navigation options.
+
+Example: Creating a responsive navigation bar that turns into a hamburger menu on smaller screens.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.header-right {
+    float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .header-right {
+        float: none;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo">CompanyLogo</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+
 </body>
 </html>
 
